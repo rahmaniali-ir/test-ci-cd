@@ -1,0 +1,19 @@
+name: Github actions test
+on: [push]
+jobs:
+  First job:
+  runs-on: ubuntu-latest
+  steps:
+    - run: echo triggered by ${{ github.action }}
+    - run: echo running os ${{ runner.os }}
+    - run: echo branch ${{ github.ref }}
+    - name: Checkout
+      uses: actions/checkout@v2
+    - run: ls
+    - run: cd /
+    - run: ls
+    - run: echo repo ${{ github.repository }}
+    - run: echo workspace ${{ github.workspace }}
+    - name: list of files
+      run: |
+        ls ${{ github.workspace }}
