@@ -1,6 +1,13 @@
 name: Github actions test
 on: [push]
 jobs:
+  Go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - run: go version
+
   First-Job:
     runs-on: ubuntu-latest
     steps:
