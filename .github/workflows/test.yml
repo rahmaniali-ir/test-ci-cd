@@ -17,3 +17,12 @@ jobs:
       - name: list of files
         run: |
           ls ${{ github.workspace }}
+
+  Second-Job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls
+      - run: mkdir test
+      - run: ls
+      - run: cd test
+      - run: ls -a
