@@ -1,7 +1,7 @@
 name: Github actions test
 on: [push]
 jobs:
-  First job:
+  First-Job:
     runs-on: ubuntu-latest
     steps:
       - run: echo triggered by ${{ github.action }}
