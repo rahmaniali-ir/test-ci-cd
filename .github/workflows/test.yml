@@ -4,6 +4,8 @@ jobs:
   First-Job:
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
+      - run: whoami
       - run: echo triggered by ${{ github.action }}
       - run: echo running os ${{ runner.os }}
       - run: echo branch ${{ github.ref }}
